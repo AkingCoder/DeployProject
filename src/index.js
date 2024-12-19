@@ -12,8 +12,8 @@ dotenv.config({
 
 dbConnect()
   .then(() => {
-    app.listen(3000, () => {
-      console.log(`http://localhost:${3000}`)
+    app.listen(process.env.PORT, () => {
+      console.log(`http://localhost:${process.env.PORT}`);
     })
   }).catch((err) => {
     console.error("Failed to connect to database", err);
